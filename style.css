@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F5F5;
+  font-family: "Roboto", sans-serif;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: calc(1170px + 30px);
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  background-color: #FFFFFF;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.hero {
+  background-color: #2F303A;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero .container {
+  text-align: center;
+}
+
+.hero .title {
+  color: #FFFFFF;
+  font-size: 44px;
+  line-height: 60px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.footer {
+  background-color: #2F303A;
+  padding: 60px 0;
+}
