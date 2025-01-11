@@ -1,3 +1,16 @@
+:root {
+  --base-light: #fff;
+  --base-light1: #F5F5F5;
+  --base-grey: #757575;
+
+  --base-dark: #212121;
+  --base-dark1: #2F303A;
+
+  --accent-color: #2196F3;
+
+  --dark-box-shadow: rgba(117, 117, 117, 1);
+}
+
 /* ------- GLOBAL STYLES -------- */
 
 *,
@@ -10,9 +23,9 @@
 }
 
 body {
-  background-color: #F5F5F5;
+  background-color: var(--base-light1);
   font-family: "Roboto", sans-serif;
-  color: #757575;
+  color: var(--base-grey);
   letter-spacing: 3%;
 }
 
@@ -38,8 +51,8 @@ a:hover {
 }
 
 .button {
-  background-color: #2196F3;
-  color: #fff;
+  background-color: var(--accent-color);
+  color: var(--base-light);
   font-size: 16px;
   line-height: 30px;
   font-weight: 600;
@@ -49,15 +62,24 @@ a:hover {
 }
 
 .title {
-  color: #212121;
+  color: var(--base-dark);
   font-size: 36px;
   font-weight: 600;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 /* ------- HEADER STYLES -------- */
 
 .header {
-  background-color: #FFFFFF;
+  background-color: var(--base-light);
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -68,16 +90,43 @@ a:hover {
 
 .nav__link,
 .contacts-list__link {
-  color: #212121;
+  color: var(--base-dark);
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2%;
 }
 
+.header .container {
+  display: flex;
+}
+
+.header .wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header .wrapper:last-child {
+  margin-left: auto;
+}
+
+.header .logo {
+  margin-right: 93px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 50px;
+}
+
+.contacts-list {
+  display: flex;
+  gap: 50px;
+}
+
 /* ------- HERO SECTION STYLES -------- */
 
 .hero {
-  background-color: #2F303A;
+  background-color: var(--base-dark1);
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -87,17 +136,29 @@ a:hover {
 }
 
 .hero__title {
-  color: #fff;
+  color: var(--base-light);
   font-size: 44px;
   line-height: 60px;
   font-weight: 900;
   margin-bottom: 30px;
 }
 
+/* ----------------- */
+
+.color-wrapper {
+  background-color: var(--base-light);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* ------- FEATURES SECTION STYLES -------- */
 
+.features {
+  margin-bottom: 94px;
+}
+
 .features__item-title {
-  color: #212121;
+  color: var(--base-dark);
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -110,25 +171,42 @@ a:hover {
 
 /* ------- TEAM SECTION STYLES ---------- */
 
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .member-card__photo {
   margin-bottom: 30px;
 }
 
 .member-card__name {
-  color: #212121;
+  color: var(--base-dark);
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.member-card {
+  border-radius: 2px;
+  box-shadow: 3px 5px 10px 0px var(--dark-box-shadow);
+  overflow: hidden;
+}
+
+.member-card__photo {
+
 }
 
 .member-card__position {
   font-size: 16px;
+  text-align: center;
 }
 
 /* ------- FOOTER STYLES -------- */
 
 .footer {
-  background-color: #2F303A;
+  background-color: var(--base-dark1);
   padding: 60px 0;
 }
 
@@ -137,5 +215,5 @@ a:hover {
 }
 
 .footer .contacts-list__link_accent {
-  color: #fff;
+  color: var(--base-light);
 }
